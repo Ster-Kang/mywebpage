@@ -1,9 +1,12 @@
 import React from 'react';
-import Welcome from './components/layouts/welcome/Welcome';
+import { BrowserRouter as Router } from 'react-router-dom';
+import AppRoutes from './routes/AppRoutes'
 
 const App: React.FC = () => {
   return (
-    <Welcome />
+    <Router>
+      <AppRoutes></AppRoutes>
+    </Router>
   );
 };
 
