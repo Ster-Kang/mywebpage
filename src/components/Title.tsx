@@ -1,9 +1,12 @@
+import React from 'react';
 import styled, { css } from 'styled-components';
 
 type TitleProps = {
-  text: string;
+  children: React.ReactNode;
   subtext?: string;
   compStyle?: string;
+  style?: React.CSSProperties;
+  
 };
 
 const StyledH1 = styled.h1<{ compStyle?: string }>`
@@ -25,6 +28,12 @@ const StyledH1 = styled.h1<{ compStyle?: string }>`
     opacity: 1;
     top: -4.8rem;
   `}
+
+  ${({compStyle}) => compStyle === 'title' && css`
+    opacity: 1;
+    top: 0;
+    transform:none;
+  `}
 `;
 
 const StyledH2 = styled.h2<{ compStyle?: string }>`
@@ -43,11 +52,11 @@ const StyledH2 = styled.h2<{ compStyle?: string }>`
   `}
 `;
 
-const Title = ({ text, subtext, compStyle }: TitleProps) => {
+const Title = ({ children, subtext, compStyle, style }: TitleProps) => {
   return (
     <>
-      <StyledH1 compStyle={compStyle}>{text}</StyledH1>
-      {subtext && <StyledH2 compStyle={compStyle}>{subtext}</StyledH2>}
+      <StyledH1 compStyle={compStyle} style={style}>{children}</StyledH1>
+      {subtext && <StyledH2 compStyle={compStyle} style={style}>{subtext}</StyledH2>}
     </>
   );
 };

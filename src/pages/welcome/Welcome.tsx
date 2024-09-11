@@ -38,9 +38,9 @@ const Welcome: React.FC = () => {
 
   return (
     <WelcomeContainer onClick={handleClick}>
-      <Title text="안녕하세요." subtext="about Ster." compStyle={showText} />
+      <Title subtext="about Ster." compStyle={showText}>"안녕하세요."</Title>
       <ButtonContainer>
-        <Button text="로그인" compStyle={showButton} focused={true}/>
+        <Button text="로그인" compStyle={showButton} focused={true} href={'/login'}/>
         <Button text="둘러보기" compStyle={showButton}/>
       </ButtonContainer>
     </WelcomeContainer>
