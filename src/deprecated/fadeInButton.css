@@ -1,0 +1,32 @@
+/* 로그인 버튼 스타일 */
+.login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    border-radius: 5rem;
+    padding: 1.2rem 3rem 1rem 3rem;
+    border: 0.2rem solid black;
+    opacity: 0;
+    transition: opacity 1.2s ease-in-out, background-color 0.1s ease-in-out, color 0.1s ease-in-out; 
+    background-color: white;
+    font-weight: 500;
+    transform: translateY(-4.8rem); /* 처음 위치를 약간 아래로 설정 */
+}
+
+  /* Hover 효과 추가 */
+.login:hover {
+    background-color: #000000e2; /* hover 시 배경색 변경 */
+    color: #ffffff;
+}
+
+.login.focused {
+    background-color: #000000e2;
+    color: #ffffff;
+}
+
+  /* 버튼이 보일 때 (fadeInButton이 true일 때) */
+.login.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
