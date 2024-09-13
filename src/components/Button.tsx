@@ -7,6 +7,7 @@ type ButtonProps = {
   compStyle?: string;
   fadeIn?: boolean;
   focused?: boolean;
+  style?: React.CSSProperties;
 };
 
 const StyledButton = styled.button<{ fadeIn?: boolean, focused?: boolean, compStyle?: string }>`
@@ -45,7 +46,7 @@ const StyledButton = styled.button<{ fadeIn?: boolean, focused?: boolean, compSt
   `}
 `;
 
-const Button = ({ text, href, compStyle, fadeIn, focused }: ButtonProps) => {
+const Button = ({ text, href, compStyle, fadeIn, focused, style }: ButtonProps) => {
   const navigate = useNavigate();
 
   const handleClick = () => {
@@ -62,6 +63,7 @@ const Button = ({ text, href, compStyle, fadeIn, focused }: ButtonProps) => {
       focused={focused}
       compStyle={compStyle}
       onClick={handleClick}
+      style={style}
     >
       {text}
     </StyledButton>

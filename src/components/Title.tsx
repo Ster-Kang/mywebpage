@@ -46,9 +46,20 @@ const StyledH2 = styled.h2<{ compStyle?: string }>`
   font-weight: 400;
   margin-left: 0.5rem;
 
-  ${({ compStyle }) => (compStyle === 'fadeIn' || compStyle === 'basic') && css`
+  ${({ compStyle }) => compStyle === 'fadeIn' && css`
     opacity: 1;
     transform: translateY(0);
+  `}
+  
+  ${({ compStyle }) => compStyle === 'basic' && css`
+    opacity: 1;
+    top: -4.8rem;
+  `}
+
+  ${({compStyle}) => compStyle === 'title' && css`
+    opacity: 1;
+    top: 0;
+    transform:none;
   `}
 `;
 
