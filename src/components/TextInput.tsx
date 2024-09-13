@@ -5,6 +5,7 @@ type TextInputProps = {
   placeHolder?: string;
   valueType?: string; // "text" || "password"
   style?: React.CSSProperties;
+  required?: boolean;
 };
 
 const StyledInput = styled.input<{ isFocused: boolean }>`
@@ -28,7 +29,7 @@ const StyledInput = styled.input<{ isFocused: boolean }>`
   }
 `;
 
-const TextInput = ({ placeHolder, valueType, style }: TextInputProps): JSX.Element => {
+const TextInput = ({ placeHolder, valueType, style, required }: TextInputProps): JSX.Element => {
   const [isFocused, setIsFocused] = useState(false);
   const [inputValue, setInputValue] = useState('');
 
@@ -55,6 +56,7 @@ const TextInput = ({ placeHolder, valueType, style }: TextInputProps): JSX.Eleme
       onBlur={handleBlur}
       onChange={handleInputChange}
       style={style}
+      required={required}
     />
   );
 };

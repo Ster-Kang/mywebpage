@@ -99,7 +99,7 @@ const Login: React.FC = () => {
             
 
             <ButtonContainer>
-                <Button text="돌아가기" compStyle="basic"/>
+                <Button text="돌아가기" compStyle="basic" href="back"/>
                 <Button text="로그인" compStyle="basic" focused={true}/>
             </ButtonContainer>
             <a
@@ -110,7 +110,7 @@ const Login: React.FC = () => {
                     textUnderlineOffset: '0.5rem'
                 }}
 
-                href='#'
+                href='/Join'
             >
                 회원가입 하기
             </a>
