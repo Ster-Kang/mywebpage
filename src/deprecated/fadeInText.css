@@ -1,0 +1,30 @@
+.fade-in {
+    opacity: 0;
+    transform: translateY(-4.8rem);
+    transition: opacity 2s ease-in-out, transform 1s ease-in-out;
+    font-size: 6rem;
+    font-weight: 700;
+    margin: 0;
+    margin-left:1rem;
+  }
+  
+.fade-in-sub {
+    opacity: 0;
+    transform: translateY(-4.8rem);
+    transition: opacity 2s ease-in-out, transform 1s ease-in-out;
+    font-size: 4rem;
+    margin-top: 0.3rem;
+    margin-bottom: 5rem;
+    font-weight:400;
+    margin-left: 0.5rem;
+  }
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+.fade-in-sub.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
